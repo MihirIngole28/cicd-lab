@@ -38,7 +38,7 @@ jobs:
 
     - name: Build Docker image
       if: github.ref == 'refs/heads/main'
-      run: docker build -t myingole28/cicd-lab:latest
+      run: docker build -t myingole28/cicd-lab:latest .
 
     - name: Push Docker image
       if: github.ref == 'refs/heads/main'
