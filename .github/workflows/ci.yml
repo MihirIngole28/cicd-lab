@@ -37,8 +37,8 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build Docker image
-        if: github.ref == 'refs/heads/main'
-        run: docker build -t myingole28/cicd-lab:latest
+      if: github.ref == 'refs/heads/main'
+      run: docker build -t myingole28/cicd-lab:latest
 
     - name: Push Docker image
       if: github.ref == 'refs/heads/main'
